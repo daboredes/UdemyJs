@@ -1,0 +1,54 @@
+7. Hello World
+Esto es en consola:
+if (js === 'Amazing') alert('JavaScript is Fun!')
+//Parece que no necesita{}
+Las cuentas se hacen sin necesidad de declarar nada 4+8(enter)=12;
+
+8. A Brief...
+En la consola no se muestra codigo, para eso existe el console.log. Dentro de un <script> muestra el resultado en la consola.
+Poner un <script> en el index es mala practica. Por eso se crea un archivo nuevo (script.js) y se llaman desde ahi
+Por lo general el <script> va al final del body.
+El <script> se llama con un atributo src=""
+/*let js = 'Amazing';
+// console.log(4 + 10 + 20 - 105); //Muestra el resultado en la consola
+
+console.log('Jonas'); //Jonas es un value
+console.log(14); //14 es un value
+console.log(14 + 23 + 10 + 78 - 45);//El resultado es un value
+//Las Values se pueden guardar en variables.
+let firstName = 'Jonas'; //to declare a variable.
+console.log(firstName);
+//variables se nombran con camelCase.
+let CONSTANTE = 3.1415 //Las constantes pueden ir en mayus, es convencion
+console.log(CONSTANTE);
+
+//1st Lecture Values and Variables
+let country = 'Uruguay';
+let continent = 'South America';
+let population = 3500000;
+console.log(country);
+console.log(continent);
+console.log(population);
+
+
+let javascriptIsFun = true; //Boolean
+let variable;
+console.log(javascriptIsFun);
+console.log(typeof javascriptIsFun); //typeof muestra el tipo del valor consultado, en este caso la variable es boolean
+console.log(typeof 24); //24 es un numero, entonces este typeof imprime number en la consola
+console.log(typeof 'Jorge');
+console.log(typeof variable); //el valor de la variable es de tipo undefined
+
+javascriptIsFun = 'Yes, it is!' //Como es un lenguaje dinamico, permite revaluar las variables. Cuando se define una variable, es necesario el let, pero para revaluar, no es necesario.
+console.log(javascriptIsFun);
+
+/*2nd LECTURE: Data Types
+let isIsland = false;
+let language;
+let population = 3500000;
+let country = 'Uruguay';
+console.log(typeof isIsland);
+console.log(typeof language);
+console.log(typeof population);
+console.log(typeof country);
+*/
