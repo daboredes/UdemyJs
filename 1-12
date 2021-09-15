@@ -6,6 +6,8 @@ Las cuentas se hacen sin necesidad de declarar nada 4+8(enter)=12;
 
 8. A Brief...
 En la consola no se muestra codigo, para eso existe el console.log. Dentro de un <script> muestra el resultado en la consola.
+
+Ya en IDE:
 Poner un <script> en el index es mala practica. Por eso se crea un archivo nuevo (script.js) y se llaman desde ahi
 Por lo general el <script> va al final del body.
 El <script> se llama con un atributo src=""
