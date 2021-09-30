@@ -1,0 +1,8 @@
+Usar Codepen.io para previsualizar una web.
+Heading elements van de h1 a h6;
+https://devdocs.io/ es util tambien;
+<br> es una self-closing tag;
+<hr (elemento) size='3' (todo lo que viene despues es un atributo)>horizontal rule
+<!--comentarios-->
+en atom, un nuevo archivo se crea pressing A en el folder
+https://docs.emmet.io/cheat-sheet/ para ver los shortcuts de emmet.
