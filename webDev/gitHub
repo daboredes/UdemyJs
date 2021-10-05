@@ -1,0 +1,7 @@
+Para hostear una pagina en github, se crea un nuevo repository, con un archivo readme.
+
+Luego AddFile/Upload files
+Subo los archivos, no la carpeta contenedora, excepto la de imagenes.
+Se elige main branch.
+https://github.com/daboredes/cv/settings/pages para activar
+Source main branch, save y ya te tira la pagina 
