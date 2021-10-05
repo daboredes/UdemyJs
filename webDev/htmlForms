@@ -1,0 +1,13 @@
+<form></form>
+<form action="" es lo que va a hacer, si se pone una url, te lleva a ella, o si pones index.html te lleva a la pagina inicio.
+<form action="mailto:hernandezmendezd@gmail.com" esto lo que hace es abrir una ventana para mandar un mail a la direccion puesta
+<form action="mailto:hernandezmendezd@gmail.com" method="post" esto lo que hace es mandar lo que el user puso en los inputs
+<form action="mailto:hernandezmendezd@gmail.com" method="POST" enctype="text/plain" enctype define la codificacion del mensaje y es necesaria
+<label></label> representa la descripcion o leyenda de un item en un formulario 'Nombre:; por ejemplo.
+<input type=""> input es donde se ingresan datos, crea ventanas interactivas, lo importante son los types:
+type="": 
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input para ver los diferentes types
+El atributo name=""es importante para que aparezca el mensaje que se va a mandar al mail.
+<input type="submit" value="ingresar"> value cambia el texto del boton.
+<fieldset> crea un recuadro dentro del form que se puede ajustar hasta donde va.
+<textarea name="" id="" cols="30" rows="10"></textarea> cols es por columnas, y rows por filas; parece que el user puede modificar el tamanio con el mouse
