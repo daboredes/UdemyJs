@@ -12,6 +12,7 @@ si la imagen esta dentro de la carpeta de la pagina, entonces se la invoca solo 
 Hipervinculos
 <a href="url">TEXTO</a> //a viene de anchor.
 <a> no abre nueva pestania, sino que te lleva al link y esta de menos sinceramente
+<a href="" target="_blank"> el atributo target es lo que hace que se abra en una nueva pestania
 
 Tables
 <table border="1px"> no se recomiendan los atributos, para eso esta css
