@@ -1,0 +1,94 @@
+Las funciones son porciones de código que se pueden reutilizar.
+
+function logger (){
+    console.log(`My Name is Jonas`);
+}
+logger(); // calling / invoking / running the function
+
+A las funciones se le pueden declarar variales dentro de los ();
+function fruitProcessor (apples, oranges){
+  console.log(apples, oranges);
+  const juice = `juice with ${apples} apples and ${oranges} oranges.`;
+  return juice; //devuelve el valor generado anteriormente, en este caso el string
+}
+
+Return es el resultado de la funcion.
+fruitProcessor(5, 0); //5 y 0 son los nuevos parametros que va a usar la funcion
+El resultado es: 5, 0
+
+Para ver el return, se puede guardarlo en una variable, o directamente console.log
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+console.log(fruitProcessor(5, 0));
+
+Si pidieramos las variables con prompts:
+let qApples = prompt(`Apples?`);
+let qOranges = prompt(`Oranges?`);
+let mixJuice = fruitProcessor(qApples, qOranges);
+console.log(mixJuice);
+O de forma mas directa: // console.log(fruitProcessor(qApples, qOranges));
+
+//Function Declaration:
+Es como se define normalmente a una funcion:
+function calcAge1(birthYear){
+  const age = 2037 - birthYear;
+  return age;
+}
+// O se puede hacer mas simple
+function calcAge1(birthYear){
+  return 2037 - birthYear;
+}
+const age1 = calcAge1(1991)
+console.log(age1)
+Se pueden invocar antes de definirlas.
+
+
+//Function Expression: es una expresion, arroja un value (lo que esta luego del =) que se guarda en una variable, por eso se puede poner dentro de un ${}
+Se escribe dentro de una variable:
+
+const funcion = function (parametros) {
+}
+No se le da nombre a la funcion, por eso se le dice anonima.
+
+const calcAge2 = function (birthYear){
+  return 2037 - birthYear;
+}
+Se invoca de la misma forma que las function declaration: guardando el resultado en una variable, o logeando directo.
+  const age2 = calcAge2(1991);
+  console.log(age2);
+  console.log(calcAge2(1991));
+No se pueden invocar antes de definirlas.
+
+
+//Arrow Functions:
+Es una forma de function expression.
+  //Function Expression
+  const calcAge2 = function (birthYear){
+      return 2037 - birthYear;
+    }
+
+  //Arrow Function
+    birthYear => 2037 - birthYear; se puede guardar en un variable: const calcAge3 = birthYear => 2037 - birthYear;
+ Al ser una forma de function expression, es un valor.
+ El return sucede de forma implicita.
+ Se invoca igual que las demas formas: const age3 = calcAge3(1991) o console.log(calcAge3(1991))
+ 
+ Arrow function con mas complejidad:
+ const yearsUntilRetirement = birthYear => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return retirement;
+}
+console.log(yearsUntilRetirement(1991));
+Se vuelve necesario usar brackets y return de nuevo.
+
+Arrow function con mas de un parametro:
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} years`;
+}
+console.log(yearsUntilRetirement(1991, 'David'));
+David retires in 19 years
+
+Las arrow function no tienen this., por eso no pueden ser usadas en todo caso.
