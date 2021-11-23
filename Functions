@@ -46,7 +46,7 @@ Se pueden invocar antes de definirlas.
 //Function Expression: es una expresion, arroja un value (lo que esta luego del =) que se guarda en una variable, por eso se puede poner dentro de un ${}
 Se escribe dentro de una variable:
 
-const funcion = function (parametros) {
+const nombreVariable = function (parametros) {
 }
 No se le da nombre a la funcion, por eso se le dice anonima.
 
@@ -91,4 +91,58 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 console.log(yearsUntilRetirement(1991, 'David'));
 David retires in 19 years
 
+Para convertir una arrow function a una function expresion se saca la flecha y se pone la keyword function antes del parametro, o visceversa.
 Las arrow function no tienen this., por eso no pueden ser usadas en todo caso.
+
+
+//Funciones dentro de funciones:
+function cutFruitPieces (fruit){
+  return fruit *4;
+}
+
+function fruitProcessor (apples, oranges){
+  // const applePieces = cutFruitPieces(apples);
+  // const orangePieces = cutFruitPieces(oranges);
+  
+  const juice = `juice with ${cutFruitPieces(apples)} pieces of apple and ${cutFruitPieces(oranges)} pieces of orange.`;
+  return juice; //devuelve el valor generado anteriormente, en este caso el string
+}
+console.log(fruitProcessor(2, 3));
+Se puede guardar el resultado de la funcion cutFruitPieces en variables, o poner el value de la funcion directamente en el template.
+
+Otra funcion que invoca una funcion:
+const calcAge = birthYear => 2037 - birthYear;
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const retirement = 65 - calcAge(birthYear);
+  return `${firstName} retires in ${retirement} years`;
+}
+console.log(yearsUntilRetirement(1991, 'Jonas'))
+
+
+Se puede hacer que el value de la primer funcion se guarde en una variable;
+const calcAge = birthYear => 2037 - birthYear;
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  let age = calcAge(birthYear)
+  let retirement = 65 - age;
+  return retirement>=0 ? `${firstName} retires in ${retirement} years` : `${firstName} is already retired`;
+}
+console.log(yearsUntilRetirement(1970, 'Jonas'));
+
+con IF en vez de ternary:
+const calcAge = birthYear => 2037 - birthYear;
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  let age = calcAge(birthYear)
+  let retirement = 65 - age;
+  // return retirement>=0 ? `${firstName} retires in ${retirement} years` : `${firstName} is already retired`;
+  if(retirement>0){
+    return `${firstName} retires in ${retirement} years 🥱`
+  }
+  else{
+    return `${firstName} is already retired 🥳`
+  }
+}
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+
